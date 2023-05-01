@@ -1,20 +1,27 @@
+/*
+ * File: 1-listint_len.c
+ * Auth: Brennan D Baraban
+ */
+
 #include "lists.h"
+#include <stdio.h>
 
 /**
- * listint_len - returns the numbee in nodess
+ * listint_len - Returns the number of elements
+ *               in a linked listint_t list.
+ * @h: A pointer to the head of the listint_t list.
  *
- * @h: headsss of a list in nodess
- *
- * Return: numbers of nodess.
+ * Return: The number of elements in the listint_t list.
  */
 size_t listint_len(const listint_t *h)
 {
-	size_t nodess = 0;
+	size_t nodes = 0;
 
-	while (h != NULL)
+	while (h)
 	{
+		nodes++;
 		h = h->next;
-		nodess++;
 	}
-	return (nodess);
+
+	return (nodes);
 }
